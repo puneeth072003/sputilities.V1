@@ -1,0 +1,150 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "spotify-circular";
+  background-color: #191414;
+  color: #191414;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.logo {
+  padding: 10px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "spotify-circular";
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: #1db954;
+}
+.section {
+  padding: 5rem 0;
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+nav {
+  background: #1db954;
+  box-shadow: #1db954;
+}
+a {
+  color: #191414;
+}
+.nav-header {
+  background: #1db954;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.nav-toggle {
+  font-size: 2rem;
+  font-style: bolder;
+  color: #191414;
+  background-color: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: #191414;
+}
+.logo {
+  height: 60px;
+}
+.links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.links a {
+  color: #191414;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s linear;
+}
+.links a:hover {
+  background: #f5f5f5;
+  font-style: bolder;
+  color: #191414;
+  padding-left: 1.5rem;
+}
+.show-links {
+  height: 10rem;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    background-color: #1db954;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links {
+    height: auto;
+    display: flex;
+  }
+  .links a {
+    padding: 1rem;
+    background: #1db954;
+  }
+  .links a:hover {
+    font-size: larger;
+    padding: 15px;
+    font-style: bold;
+    background: transparent;
+  }
+}

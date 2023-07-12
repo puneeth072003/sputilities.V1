@@ -1,0 +1,14 @@
+.fet-title {
+  color: #fff;
+  padding: 32px;
+  font-size: xxx-large;
+}
+.fet-1-img {
+  margin-left: 3rem;
+}
+
+@media screen and (max-width: 800px) {
+  .fet-title {
+    font-size: 2.2rem;
+  }
+}
