@@ -1,9 +1,8 @@
 
 ![Logo-white](Assets/logo-white.png)
 
-### A web app with bunch of features that can help you with Spotify account switching.
+ A web app with a bunch of features that can help you with Spotify account switching.
 
-
-## Proud successor to spotinus project
+## Proud successor to Spotinus project
 
 # Devlopment in progress👨‍💻
