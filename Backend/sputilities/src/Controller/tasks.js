@@ -1,5 +1,9 @@
-const getHome = (req, res) => {
+const { fetchAccessToken } = require("./callback");
+
+const getHome = async (req, res) => {
   res.send("hello-world");
+  const access_token = await fetchAccessToken();
+  console.log(`Access token==> ${access_token}`);
 };
 module.exports = { getHome };
 
