@@ -1,10 +1,12 @@
+const { fetchAccessToken } = require("./callback");
+
 const getLogin = async (req, res) => {
   try {
     const payLoad = new URLSearchParams({
-      client_id: "329dc13668d2474cb41046741fcabee5",
+      client_id: "478250b0aa4a4e6ca9ed489145cebd6a",
       redirect_uri: "http://localhost:3600/api/v1/login/callback",
       scope:
-        "playlist-read-private user-library-read user-read-email user-read-private playlist-modify-public playlist-modify-private",
+        "playlist-read-private playlist-read-collaborative playlist-modify-public playlist-modify-private user-library-read user-library-modify user-read-private user-read-email user-read-playback-state user-modify-playback-state user-read-currently-playing user-follow-read user-follow-modify user-top-read user-read-recently-played",
       response_type: "code",
       accept: "application/json",
     }).toString();
