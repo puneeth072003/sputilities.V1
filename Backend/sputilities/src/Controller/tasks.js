@@ -8,6 +8,9 @@ const getUser = async (req, res) => {
     headers: { Authorization: `Bearer ${global.access_token}` },
   });
   const data = await response.json();
+  const name = data.display_name;
+  const email = data.email;
+  console.log(`${name}============>${email}`);
   await res.send(data);
 };
 
@@ -24,13 +27,4 @@ const getArtist = async (req, res) => {
   res.send({ json });
 };
 
-const getLiked = async (req, res) => {
-  const data = await fetch(`https://api.spotify.com/v1/me/tracks`, {
-    headers: {
-      Authorization: `Bearer ${global.access_token}`,
-    },
-  });
-  const json = await data.json();
-  res.send({ json });
-};
-module.exports = { getHome, getUser, getArtist, getLiked };
+module.exports = { getHome, getUser, getArtist };

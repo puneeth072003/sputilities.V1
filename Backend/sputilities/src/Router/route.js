@@ -1,9 +1,5 @@
-const {
-  getHome,
-  getUser,
-  getArtist,
-  getLiked,
-} = require("../Controller/tasks");
+const { getHome, getUser, getArtist } = require("../Controller/tasks");
+const { fetchLiked } = require("../Controller/fetchLiked");
 const { getLogin } = require("../Controller/login");
 const { callBac, getAccessToken } = require("../Controller/callback");
 
@@ -16,5 +12,5 @@ router.get("/login/callback", callBac);
 router.get("/access", getAccessToken);
 router.get("/fetch", getUser);
 router.get("/artist", getArtist);
-router.get("/liked", getLiked);
+router.get("/liked", fetchLiked);
 module.exports = router;
