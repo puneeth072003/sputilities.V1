@@ -1,9 +1,11 @@
 const { getHome, getUser, getArtist } = require("../Controller/tasks");
-const { fetchLiked } = require("../Controller/fetchLiked");
+const { fetchLiked } = require("../Controller/feature 1/fetchLiked");
 const { getLogin } = require("../Controller/login");
 const { callBac, getAccessToken } = require("../Controller/callback");
+const { createPlaylist } = require("../Controller/feature 1/createPlaylist");
 
 const express = require("express");
+
 const router = express.Router();
 
 router.get("/", getHome);
@@ -13,4 +15,5 @@ router.get("/access", getAccessToken);
 router.get("/fetch", getUser);
 router.get("/artist", getArtist);
 router.get("/liked", fetchLiked);
+router.get("/playlist", createPlaylist);
 module.exports = router;

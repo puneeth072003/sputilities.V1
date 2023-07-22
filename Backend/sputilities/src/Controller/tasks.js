@@ -8,9 +8,9 @@ const getUser = async (req, res) => {
     headers: { Authorization: `Bearer ${global.access_token}` },
   });
   const data = await response.json();
-  const name = data.display_name;
-  const email = data.email;
-  console.log(`${name}============>${email}`);
+  global.name = data.display_name;
+  global.id = data.id;
+  console.log(`${global.name}============>${global.id}`);
   await res.send(data);
 };
 
