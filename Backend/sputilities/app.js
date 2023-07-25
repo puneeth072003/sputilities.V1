@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const router = require("./src/Router/route");
 
+app.use(express.json());
 // Remove this later
 app.use("/api/v1/", router);
 

@@ -1,5 +1,6 @@
 const fetchLiked = async (req, res) => {
   let offset = 0;
+  global.LikedIds = [];
   let allLikedSongs = [];
   const fetchTracks = async () => {
     const response = await fetch(
@@ -20,11 +21,12 @@ const fetchLiked = async (req, res) => {
     allLikedSongs.push(...processLikedSongs(data));
     offset += 50;
   }
+  await console.log(`ID array========>${global.LikedIds.length}`);
   console.log(`length========>${allLikedSongs.length}`);
   res.send(allLikedSongs);
-  
 };
 const processLikedSongs = (data) => {
+  getIds(data);
   return data.items.map((song) => {
     const track = song.track;
     const artists = track.artists.map((artist) => {
@@ -35,12 +37,17 @@ const processLikedSongs = (data) => {
     });
 
     return {
-      
       name: track.name,
       id: track.id,
       image: track.album.images[0]?.url || null,
       artists: artists,
     };
+  });
+};
+const getIds = async (data) => {
+  data.items.map((song) => {
+    const track = song.track;
+    global.LikedIds.push(`spotify:track:${track.id}`);
   });
 };
 // const fetchLiked=async(req,res)=>{
