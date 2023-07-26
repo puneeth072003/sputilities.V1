@@ -21,7 +21,7 @@ const callBac = async (req, res) => {
   global.refresh_token = data.refresh_token;
   console.log(`Access token from callback ==> ${global.access_token}`);
   console.log(`Refresh token from callback ==> ${global.refresh_token}`);
-  res.redirect("/");
+  res.redirect("/api/v1/");
 };
 const getAccessToken = async (req, res) => {
   const refresh_token = global.refresh_token;

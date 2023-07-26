@@ -6,7 +6,7 @@ const Navlinks = () => {
     <nav>
       <ul className="links">
         <li>
-          <a href="#">home</a>
+          <a href="http://localhost:3600/api/v1/">home</a>
         </li>
         <li>
           <a href="#">about</a>

@@ -22,6 +22,7 @@ const fetchLiked = async (req, res) => {
     offset += 50;
   }
   await console.log(`ID array========>${global.LikedIds.length}`);
+  global.length = global.LikedIds.length;
   console.log(`length========>${allLikedSongs.length}`);
   res.send(allLikedSongs);
 };
