@@ -3,6 +3,20 @@
   padding: 32px;
   font-size: xxx-large;
 }
+.cont-app {
+  color: #fff;
+}
+.head-steps {
+  text-align: center;
+}
+.steps {
+  text-align: center;
+  column-count: 3;
+  column-gap: 20px;
+}
+.step-head {
+  color: #fff;
+}
 .fet-1-img {
   margin-left: 3rem;
 }
