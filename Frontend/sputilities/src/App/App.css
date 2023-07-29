@@ -5,16 +5,25 @@
 }
 .cont-app {
   color: #fff;
+  height: 20rem;
 }
 .head-steps {
   text-align: center;
 }
 .steps {
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   column-count: 3;
   column-gap: 20px;
 }
 .step-head {
+  color: #1db954;
+}
+.step-dis {
+  flex: 1 1 300px;
+  margin: 10px;
+  padding: 10px;
   color: #fff;
 }
 .fet-1-img {
