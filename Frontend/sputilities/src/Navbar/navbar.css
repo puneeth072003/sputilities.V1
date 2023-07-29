@@ -112,6 +112,18 @@ a {
 .show-links {
   height: 10rem;
 }
+.login-btn {
+  background-color: #191414;
+  text-align: center;
+  padding: 12px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 17px;
+  color: #1db954;
+  font-family: "spotify-circular";
+  border: #191414;
+  border-radius: 10px;
+}
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -146,5 +158,8 @@ a {
     padding: 15px;
     font-style: bold;
     background: transparent;
+  }
+  .login-btn:hover {
+    color: #1ee664;
   }
 }

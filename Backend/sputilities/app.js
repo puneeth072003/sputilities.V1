@@ -6,7 +6,7 @@ const router = require("./src/Router/route");
 
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static("../../Frontend/sputilities/dist"));
 // Remove this later
 app.use("/api/v1/", router);
 

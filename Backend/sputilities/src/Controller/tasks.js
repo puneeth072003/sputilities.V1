@@ -1,5 +1,14 @@
+const path = require("path");
+
 const getHome = async (req, res) => {
-  res.send("hello-world");
+  res.sendFile(
+    path.join(
+      __dirname,
+      "../../../../Frontend/sputilities",
+      "dist",
+      "index.html"
+    )
+  );
 };
 const getUser = async (req, res) => {
   console.log(`Access token from fetch==> ${global.access_token}`);
