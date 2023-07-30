@@ -53,15 +53,60 @@
   margin-top: 5px;
   height: 1.9rem;
 }
+.why-body {
+  background-image: linear-gradient(to bottom, #1db954, #191414);
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+.why-flex {
+  display: flex;
+  text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.why-img {
+  height: 30rem;
+}
+.why-box {
+  margin-top: 4.5rem;
+  padding-left: 2rem;
+}
+.why-title {
+  color: #ffffff;
+  text-align: start;
+}
+.why-dis {
+  color: #ffffff;
+  font-size: 1.3rem;
+  text-align: start;
+  padding-left: 5px;
+}
+
 @media screen and (max-width: 800px) {
   .fet-title {
     font-size: 2.2rem;
   }
   .ban-cont {
     margin: auto;
+    padding-bottom: 11rem;
   }
   .cont-app {
     height: auto;
     margin-bottom: 2rem;
+  }
+  .why-flex {
+    display: inline;
+    margin: auto;
+    flex: wrap;
+  }
+  .why-box {
+    margin-top: auto;
+  }
+  .why-img {
+    display: none;
+  }
+  .why-dis {
+    font-size: 20px;
   }
 }

@@ -23,7 +23,11 @@ const Contact = () => {
             <i className="fa-solid fa-bug"></i>
           </a>
         </div>
-        <p className="final">sputilities.v1 @2023</p>
+        <p className="final">
+          sputilities.v1 @2023
+          <br />
+          Developed by Puneeth Y
+        </p>
       </div>
     </div>
   );
