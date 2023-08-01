@@ -1,7 +1,7 @@
 
 ![Logo-white](Assets/logo-white.png)
 
- A web app with a bunch of features that can help you with Spotify account switching.
+### Sputilities, you can effortlessly manage all your liked songs and easily share them with others, along with a plethora of other amazing features.
 
 ## Proud successor to Spotinus project
 
