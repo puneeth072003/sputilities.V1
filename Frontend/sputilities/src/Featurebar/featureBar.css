@@ -1,0 +1,117 @@
+.feat-div {
+  margin-bottom: 7rem;
+  text-align: center;
+}
+.feat-img {
+  height: 10rem;
+  margin-top: 0;
+  transition: transform 0.2s ease;
+}
+.feat-img:hover {
+  transform: scale(0.9);
+}
+.feat-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 180px;
+  text-align: center;
+}
+.feat-title {
+  color: white;
+  margin-bottom: 0;
+}
+.feat-cont {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.feat-name {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+h2 {
+  color: #1db954;
+}
+.app-description {
+  text-align: center;
+  line-height: 1.1;
+  margin: 0 auto;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.app-description h3 {
+  color: #fefffe;
+  font-size: 2.5rem;
+}
+.app-dis {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.grid-dis {
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.grid-head {
+  font-size: 21px;
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.grid-item {
+  flex-basis: 25%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.app-description p {
+  margin-bottom: 10px;
+}
+
+.app-description .emoji {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .app-description {
+    margin-left: 2px;
+    margin-top: 1rem;
+    margin-right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .app-description h3 {
+    font-size: 2rem;
+  }
+  .grid-container {
+    padding: 0;
+    display: block;
+  }
+  .grid-item {
+    margin-bottom: 0;
+  }
+  .feat-div {
+    margin-bottom: auto;
+    justify-content: center;
+  }
+  .feat-img {
+    height: 7rem;
+  }
+  .feat-cont {
+    display: inline-block;
+    text-align: center;
+  }
+  .feat-name {
+    font-size: 1rem;
+  }
+}

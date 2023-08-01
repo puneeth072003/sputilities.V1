@@ -1,14 +1,11 @@
-.fet-title {
-  color: #fff;
-  padding: 32px;
-  font-size: xxx-large;
-}
 .cont-app {
+  padding-top: 2rem;
   color: #fff;
   height: 20rem;
-  margin-top: 10rem;
 }
 .head-steps {
+  color: #fff;
+  font-size: 2.5rem;
   text-align: center;
 }
 .steps {
@@ -20,15 +17,13 @@
 }
 .step-head {
   color: #1db954;
+  font-size: 1.5rem;
 }
 .step-dis {
   flex: 1 1 300px;
   margin: 10px;
   padding: 10px;
   color: #fff;
-}
-.fet-1-img {
-  margin-left: 3rem;
 }
 .ban-cont {
   background-color: #191414;
@@ -53,8 +48,10 @@
   margin-top: 5px;
   height: 1.9rem;
 }
+.faded {
+  background-image: linear-gradient(to bottom, #28b95b, #191414);
+}
 .why-body {
-  background-image: linear-gradient(to bottom, #1db954, #191414);
   height: auto;
   display: flex;
   justify-content: center;
@@ -64,6 +61,7 @@
   text-align: center;
   margin-left: 5rem;
   margin-right: 5rem;
+  margin-bottom: 5rem;
 }
 .why-img {
   height: 30rem;
