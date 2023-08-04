@@ -110,19 +110,49 @@
 }
 
 /* Animation effects */
-.fade-in {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-/* Initially hide the elements */
 .step-dis {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
 }
-
-/* When the element is in the viewport, make it visible with animation */
 .step-dis.visible {
   opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.ban-cont {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.ban-cont.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.feat-box:nth-child(2) {
+  transition-delay: 100ms;
+}
+
+.feat-box:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.feat-box:nth-child(4) {
+  transition-delay: 300ms;
+}
+
+.feat-box:nth-child(5) {
+  transition-delay: 400ms;
+}
+.feat-box {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.feat-box.visible {
+  opacity: 1;
+  filter: blur(0);
   transform: translateX(0);
 }
