@@ -1,5 +1,5 @@
 .feat-div {
-  margin-bottom: 7rem;
+  margin-bottom: 4rem;
   text-align: center;
 }
 .feat-img {
@@ -43,6 +43,7 @@ h2 {
   margin: 0 auto;
   padding-left: 8rem;
   padding-right: 8rem;
+  margin-bottom: 2rem;
 }
 .app-description h3 {
   color: #fefffe;

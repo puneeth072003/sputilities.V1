@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useElementOnScreen } from "../animate/OnScroll";
+import "../App/App.css";
 
 const FeatureDis = () => {
+  const [containerRef, isVisible] = useElementOnScreen({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (isVisible) {
+      containerRef.current.classList.add("visible");
+    } else {
+      containerRef.current.classList.remove("visible");
+    }
+  }, [isVisible]);
   return (
-    <div class="app-description">
+    <div className="app-description">
       <h3>
         Are you tired of the hassle of managing your liked songs on Spotify?
       </h3>
@@ -11,10 +26,13 @@ const FeatureDis = () => {
         experience. Our cutting-edge app brings you a range of powerful features
         that will transform the way you enjoy your favorite tunes.
       </p>
-      <div class="grid-container">
-        <div class="grid-item">
+      <div className="grid-container">
+        <div
+          ref={containerRef}
+          className={`grid-item ${isVisible ? "visible" : ""}`}
+        >
           <p className="grid-head">
-            Convert Liked Songs to Playlists in a Snap!
+            Never before has playlist creation been so fast!
           </p>
           <p className="grid-dis">
             With just a single click, Sputilities will intelligently convert all
@@ -22,15 +40,17 @@ const FeatureDis = () => {
             curation without lifting a finger!
           </p>
         </div>
-        <div class="grid-item">
-          <p className="grid-head">Organize and Manage Your Music with Ease!</p>
+        <div className={`grid-item ${isVisible ? "visible" : ""}`}>
+          <p className="grid-head">
+            Organize and Manage Your Liked library with Ease!
+          </p>
           <p className="grid-dis">
             Sputilities empowers you to effortlessly organize and categorize
             your favorite songs, so you can find the perfect track for every
             mood, anytime.
           </p>
         </div>
-        <div class="grid-item">
+        <div className={`grid-item ${isVisible ? "visible" : ""}`}>
           <p className="grid-head">
             Share Your Musical Discoveries with Friends!
           </p>
@@ -40,7 +60,7 @@ const FeatureDis = () => {
             songs to share with others.
           </p>
         </div>
-        <div class="grid-item">
+        <div className={`grid-item ${isVisible ? "visible" : ""}`}>
           <p className="grid-head">And so much More Waiting to be Explored!</p>
           <p className="grid-dis">
             Sputilities is constantly evolving, and we have exciting new

@@ -18,7 +18,7 @@ const Banner = () => {
 
   return (
     <div ref={containerRef} className="ban-cont">
-      <p class="ban-msg">
+      <p className="ban-msg">
         We'd appreciate a ⭐ on Github if you liked our service. Your support
         helps us get better. Thank you!
         <br />

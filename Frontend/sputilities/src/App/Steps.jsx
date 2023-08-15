@@ -24,21 +24,21 @@ const Steps = () => {
     <div className="cont-app">
       <h2 className="head-steps">How to use sputilities?</h2>
       <div className="steps">
-        <p className={`step-dis ${isVisible ? "visible" : ""}`}>
+        <div className={`step-dis ${isVisible ? "visible" : ""}`}>
           <h3 className="step-head">step 1</h3>
-          {step1}
-        </p>
-        <p
+          <p className="step-p">{step1}</p>
+        </div>
+        <div
           ref={containerRef}
           className={`step-dis ${isVisible ? "visible" : ""}`}
         >
           <h3 className="step-head">step 2</h3>
-          {step2}
-        </p>
-        <p className={`step-dis ${isVisible ? "visible" : ""}`}>
+          <p className="step-p">{step2}</p>
+        </div>
+        <div className={`step-dis ${isVisible ? "visible" : ""}`}>
           <h3 className="step-head">step 3</h3>
-          {step3}
-        </p>
+          <p className="step-p">{step3}</p>
+        </div>
       </div>
     </div>
   );

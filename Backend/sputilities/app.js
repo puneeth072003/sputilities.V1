@@ -4,7 +4,12 @@ const cors = require("cors");
 const app = express();
 const router = require("./src/Router/route");
 
-app.use(cors());
+const corsOptions = {
+  "Access-Control-Allow-Origin": "http:localhost:3600",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static("../../Frontend/sputilities/dist"));
 // Remove this later

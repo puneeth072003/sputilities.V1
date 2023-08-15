@@ -12,7 +12,7 @@ const Featurebar = () => {
   const [containerRef, isVisible] = useElementOnScreen({
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 0.3,
   });
 
   useEffect(() => {
@@ -54,7 +54,9 @@ const Featurebar = () => {
           <h3 className="feat-name">Reset liked library</h3>
         </div>
       </div>
-      <h2>And many more coming soon</h2>
+      <h2 className={`andMore ${isVisible ? "visible" : ""}`}>
+        And many more coming soon
+      </h2>
     </div>
   );
 };
