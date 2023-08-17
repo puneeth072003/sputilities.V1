@@ -11,7 +11,7 @@ const getLogin = async (req, res) => {
       accept: "application/json",
     }).toString();
     const loginUrl = `https://accounts.spotify.com/authorize?${payLoad}`;
-    await res.redirect(loginUrl);
+    res.json({ redirectUrl: loginUrl });
   } catch (error) {
     res.status(500).json(error);
   }

@@ -9,8 +9,10 @@ const Navlinks = () => {
   const [auth, setAuth] = useState(false);
   const handleLogin = async () => {
     try {
-      await axios.get(url);
-      setAuth(true);
+      const response = await axios.get(url);
+      if (response.data.redirectUrl) {
+        window.location.href = response.data.redirectUrl;
+      }
     } catch (error) {
       console.error("Error in login:", error);
     }
@@ -20,7 +22,7 @@ const Navlinks = () => {
       <ul className="links">
         <li>
           <button onClick={handleLogin} className="login-btn">
-            {auth ? `${fetchProfile}` : "Login"}
+            {auth ? `Logged in` : "Login"}
           </button>
         </li>
       </ul>

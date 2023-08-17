@@ -5,7 +5,7 @@ const app = express();
 const router = require("./src/Router/route");
 
 const corsOptions = {
-  "Access-Control-Allow-Origin": "http:localhost:3600",
+  origin: "http://localhost:5173",
   credentials: true,
 };
 
