@@ -20,7 +20,7 @@ const getUser = async (req, res) => {
   global.name = data.display_name;
   global.id = data.id;
   console.log(`${global.name}============>${global.id}`);
-  await res.send(data);
+  await res.json(data);
 };
 
 const getArtist = async (req, res) => {

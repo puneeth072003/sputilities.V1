@@ -25,6 +25,7 @@ const Navlinks = () => {
       if (login.data.login === true) {
         setAuth(true);
       }
+      window.name = await fetchProfile();
     } catch (error) {
       console.error("Error checking login status:", error);
     }
@@ -39,7 +40,7 @@ const Navlinks = () => {
       <ul className="links">
         <li>
           <button onClick={handleLogin} className="login-btn">
-            {auth ? `Logged in` : "Login"}
+            {auth ? `${window.name}` : "Login"}
           </button>
         </li>
       </ul>
