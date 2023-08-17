@@ -1,5 +1,8 @@
 const CLIENT_ID = "478250b0aa4a4e6ca9ed489145cebd6a";
 const CLIENT_SECRET = "b66f699c2af041cdaa6c67e1315882cb";
+
+var flag = false;
+
 const callBac = async (req, res) => {
   const code = req.query.code;
 
@@ -40,13 +43,14 @@ const getAccessToken = async (req, res) => {
   });
   const data = await response.json();
   global.access_token = await data.access_token;
+  if (global.access_token != undefined) {
+    flag = true;
+  }
   console.log(`New access token ====> ${global.access_token}`);
 };
 const getcheck = (req, res) => {
-  if (global.access_token) {
+  if (flag) {
     res.json({ login: true });
-  } else {
-    res.json({ login: false });
   }
 };
 
