@@ -7,15 +7,17 @@ const createPlaylist = async (req, res) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      name: req.body.name,
+      // name: req.body.name,
+      name: `${global.name}'s Liked`,
       description: `Collection of all the liked songs`,
       public: true,
     }),
   });
   const data = await response.json();
-  res.send(data);
-  // global.playlist_id = data.id;
-  // res.send(`PLAYLIST ID ========>${global.playlist_id}`);
+  // res.send(data);
+  //
+  global.playlist_id = data.id;
+  console.log(`PLAYLIST ID ========>${global.playlist_id}`);
 };
 
 module.exports = { createPlaylist };

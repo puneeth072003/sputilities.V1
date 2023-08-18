@@ -24,7 +24,7 @@ const fetchLiked = async (req, res) => {
   await console.log(`ID array========>${global.LikedIds.length}`);
   global.length = global.LikedIds.length;
   console.log(`length========>${allLikedSongs.length}`);
-  res.send(allLikedSongs);
+  // res.send(allLikedSongs);
 };
 const processLikedSongs = (data) => {
   getIds(data);

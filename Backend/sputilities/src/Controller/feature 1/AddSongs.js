@@ -18,9 +18,9 @@ const addSongs = async (req, res) => {
         position: offset,
       }),
     });
+    // const data = response.json();
+    // res.send(data);
   }
-  const data = response.json();
-  res.send(data);
 };
 
 module.exports = { addSongs };
