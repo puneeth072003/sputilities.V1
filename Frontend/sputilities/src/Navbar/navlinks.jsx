@@ -22,6 +22,7 @@ const Navlinks = () => {
   const checkLoginStatus = async () => {
     try {
       const login = await axios.get("http://localhost:3600/api/v1/check-login");
+      window.name = await fetchProfile();
       console.log(login);
       if (login.data.login === true) {
         setAuth(true);
@@ -29,6 +30,7 @@ const Navlinks = () => {
       } else {
         setAuth(false);
       }
+      console.log(auth);
     } catch (error) {
       console.error("Error checking login status:", error);
     }

@@ -22,6 +22,9 @@ const callBac = async (req, res) => {
   const data = await response.json();
   global.access_token = data.access_token;
   global.refresh_token = data.refresh_token;
+  if (global.access_token != undefined) {
+    flag = true;
+  }
   console.log(`Access token from callback ==> ${global.access_token}`);
   console.log(`Refresh token from callback ==> ${global.refresh_token}`);
   res.redirect("http://localhost:5173");
@@ -49,6 +52,7 @@ const getAccessToken = async (req, res) => {
   console.log(`New access token ====> ${global.access_token}`);
 };
 const getcheck = (req, res) => {
+  console.log(flag);
   if (flag) {
     res.json({ login: true });
   }
