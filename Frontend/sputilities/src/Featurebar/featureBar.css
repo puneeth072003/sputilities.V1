@@ -116,3 +116,34 @@ h2 {
     font-size: 1rem;
   }
 }
+
+/* Feature 1 */
+.Feat1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.loading-screen,
+.success-screen {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loading-screen h1,
+.success-screen h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.success-screen p {
+  font-size: 18px;
+  color: #44a542;
+}

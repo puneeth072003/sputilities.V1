@@ -4,6 +4,7 @@ import costomize from "./assets/custom.png";
 import "./featureBar.css";
 import resetLiked from "./assets/resetLiked.png";
 import toLiked from "./assets/toLiked.png";
+import handleFeat1 from "./Controllers/handleFeat1";
 import React, { useEffect, useRef, useState } from "react";
 import { useElementOnScreen } from "../animate/OnScroll";
 import "../App/App.css";
@@ -31,7 +32,7 @@ const Featurebar = () => {
           ref={containerRef}
           className={`feat-box ${isVisible ? "visible" : ""}`}
         >
-          <img className="feat-img" src={playList}></img>
+          <img className="feat-img" src={playList} onClick={handleFeat1}></img>
           <h3 className="feat-name">Create a playlist of all Liked songs</h3>
         </div>
         <div className={`feat-box ${isVisible ? "visible" : ""}`}>
