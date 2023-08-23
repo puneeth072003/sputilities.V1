@@ -1,3 +1,0 @@
-const removeliked=(req,res)=>{
-    
-}
