@@ -1,21 +1,26 @@
 .timer-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  transition: background-color 0.5s ease; /* Animation for background color */
+  margin: 5%;
+  margin-bottom: 1rem;
+  transition: background-color 0.5s ease;
 }
-
-.timer {
-  font-size: 3rem;
-  animation: fade 0.5s infinite alternate; /* Animation for timer text */
+.success_body {
+  color: #fff;
+  margin: 0;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
-
-@keyframes fade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.5;
-  }
+.feat1-logo {
+  margin-top: 3rem;
+  height: 5rem;
+}
+.feat1-link {
+  color: #1db954;
+  font-size: smaller;
 }
