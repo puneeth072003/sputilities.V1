@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
 import React from "react";
 import App from "../App/App";
 import Feat_1 from "../pages/feat_1/Feat_1.jsx";

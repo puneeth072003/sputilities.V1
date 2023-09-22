@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   margin: 5%;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   transition: background-color 0.5s ease;
 }
 .success_body {
@@ -22,5 +22,9 @@
 }
 .feat1-link {
   color: #1db954;
+  font-size: smaller;
+}
+.feat1-span {
+  color: #ea3621;
   font-size: smaller;
 }

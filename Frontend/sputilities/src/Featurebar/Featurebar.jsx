@@ -4,10 +4,10 @@ import costomize from "./assets/custom.png";
 import "./featureBar.css";
 import resetLiked from "./assets/resetLiked.png";
 import toLiked from "./assets/toLiked.png";
-import handleFeat1 from "./Controllers/handleFeat1";
 import React, { useEffect, useRef, useState } from "react";
 import { useElementOnScreen } from "../animate/OnScroll";
 import "../App/App.css";
+import { Link } from "react-router-dom";
 
 const Featurebar = () => {
   const [containerRef, isVisible] = useElementOnScreen({
@@ -28,13 +28,15 @@ const Featurebar = () => {
     <div className="feat-div">
       <h1 className="feat-title">Features</h1>
       <div className="feat-cont">
-        <div
-          ref={containerRef}
-          className={`feat-box ${isVisible ? "visible" : ""}`}
-        >
-          <img className="feat-img" src={playList} onClick={handleFeat1}></img>
-          <h3 className="feat-name">Create a playlist of all Liked songs</h3>
-        </div>
+        <Link to="/feat_1">
+          <div
+            ref={containerRef}
+            className={`feat-box ${isVisible ? "visible" : ""}`}
+          >
+            <img className="feat-img" src={playList}></img>
+            <h3 className="feat-name">Create a playlist of all Liked songs</h3>
+          </div>
+        </Link>
         <div className={`feat-box ${isVisible ? "visible" : ""}`}>
           <img className="feat-img" src={costomize}></img>
           <h3 className="feat-name">customize the playlist creation process</h3>

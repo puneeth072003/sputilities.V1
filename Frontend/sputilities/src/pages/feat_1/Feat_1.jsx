@@ -7,6 +7,29 @@ const Feat_1 = () => {
   const [countdown, setCountdown] = useState(10);
   const [failure, setFailure] = useState(false);
 
+  const fetchDataFromBackend = async () => {
+    try {
+      const response = await fetch("http://localhost:3600/api/v1/feat_1"); // Replace with your actual backend endpoint
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      if (data.state == true) {
+        console.log("Setting failure to true");
+        setFailure(true);
+      } else {
+        console.log("Setting failure to false");
+        setFailure(false);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchDataFromBackend();
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       if (countdown > 0) {
@@ -33,7 +56,7 @@ const Feat_1 = () => {
             failure ? (
               <h1>Enjoy!!</h1>
             ) : (
-              <h1>we are really sorry!!!</h1>
+              <h1>Please try logging in again</h1>
             )
           ) : (
             <Bars
@@ -66,7 +89,7 @@ const Feat_1 = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Report any errors here
+              <span className="feat1-span">Report any errors here</span>
             </a>
           )
         ) : null}
