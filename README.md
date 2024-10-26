@@ -17,4 +17,4 @@ With Sputilities, you can effortlessly **manage all your liked songs and easily 
 - Reset Liked Library
   
 ## Please accept our apologies
-Unfortunately, **you will not be able to access the features** of Sputilities until the backend has been completed👨‍💻
+Unfortunately, **you will not be able to access the features** of Sputilities as backend is not currently deployed.👨‍💻
