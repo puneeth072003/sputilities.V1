@@ -18,26 +18,17 @@ const Navlinks = () => {
       console.error("Error in login:", error);
     }
   };
-
-  const checkLoginStatus = async () => {
+  
+  const fetchUsername = async () => {
     try {
-      const login = await axios.get("http://localhost:3600/api/v1/check-login");
-      window.name = await fetchProfile();
-      console.log(login);
-      if (login.data.login === true) {
-        setAuth(true);
-        window.name = await fetchProfile();
-      } else {
-        setAuth(false);
-      }
-      console.log(auth);
+      const username = await axios.get();
     } catch (error) {
-      console.error("Error checking login status:", error);
+      console.error("Error fetching profile:", error);
     }
   };
 
   React.useEffect(() => {
-    checkLoginStatus();
+    fetchUsername();
   }, []);
 
   return (
