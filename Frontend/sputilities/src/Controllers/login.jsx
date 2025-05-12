@@ -2,17 +2,24 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 
-const profile = "http://localhost:3600/api/v1/fetch";
-
 const fetchProfile = async () => {
   try {
-    const response = await axios.get(profile);
-    const name = response.data.display_name;
-    console.log(response.data);
-    return name;
+    // Check if there's an active session first
+    const checkSession = await axios.get("http://localhost:3600/api/v1/check-login", { withCredentials: true });
+    if (checkSession.data !== true) {
+      return "Login";
+    }
+
+    const response = await axios.get("http://localhost:3600/api/v1/getUser", { withCredentials: true });
+    const username = response.data;
+    if (username && username !== "Guest") {
+      return username;
+    }
+    return "Login";
   } catch (error) {
     console.error("Error fetching profile:", error);
-    return "No name";
+    return "Login";
   }
 };
+
 export { fetchProfile };

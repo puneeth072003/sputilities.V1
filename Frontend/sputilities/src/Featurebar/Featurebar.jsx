@@ -1,13 +1,13 @@
+import { Link } from "react-router-dom";
 import playList from "./assets/playlist.png";
 import manageliked from "./assets/manageliked.png";
 import costomize from "./assets/custom.png";
-import "./featureBar.css";
 import resetLiked from "./assets/resetLiked.png";
 import toLiked from "./assets/toLiked.png";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import { useElementOnScreen } from "../animate/OnScroll";
 import "../App/App.css";
-import { Link } from "react-router-dom";
+import "./featureBar.css";
 
 const Featurebar = () => {
   const [containerRef, isVisible] = useElementOnScreen({
@@ -33,27 +33,32 @@ const Featurebar = () => {
             ref={containerRef}
             className={`feat-box ${isVisible ? "visible" : ""}`}
           >
-            <img className="feat-img" src={playList}></img>
+            <img className="feat-img" src={playList} alt="Playlist" />
             <h3 className="feat-name">Create a playlist of all Liked songs</h3>
           </div>
         </Link>
+        {/* Link the customization process to feat_2 */}
+        <Link to="/feat_2">
+          <div className={`feat-box ${isVisible ? "visible" : ""}`}>
+            <img className="feat-img" src={costomize} alt="Customize Playlist" />
+            <h3 className="feat-name">
+              Customize the playlist creation process
+            </h3>
+          </div>
+        </Link>
         <div className={`feat-box ${isVisible ? "visible" : ""}`}>
-          <img className="feat-img" src={costomize}></img>
-          <h3 className="feat-name">customize the playlist creation process</h3>
-        </div>
-        <div className={`feat-box ${isVisible ? "visible" : ""}`}>
-          <img className="feat-img" src={toLiked}></img>
+          <img className="feat-img" src={toLiked} alt="Like Playlist" />
           <h3 className="feat-name">Like all the songs of a playlist</h3>
         </div>
         <div className={`feat-box ${isVisible ? "visible" : ""}`}>
-          <img className="feat-img" src={manageliked}></img>
+          <img className="feat-img" src={manageliked} alt="Manage Liked" />
           <h3 className="feat-name">
             Manage your liked <br />
             songs
           </h3>
         </div>
         <div className={`feat-box ${isVisible ? "visible" : ""}`}>
-          <img className="feat-img" src={resetLiked}></img>
+          <img className="feat-img" src={resetLiked} alt="Reset Liked" />
           <h3 className="feat-name">Reset liked library</h3>
         </div>
       </div>
