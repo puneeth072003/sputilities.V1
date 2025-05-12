@@ -8,11 +8,15 @@ import "./Navbar/navbar.css";
 import { Support } from "./Support bar/Support.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <div>
-    <Navbar />
-    <BrowserRouter>
-      <Content />
-    </BrowserRouter>
-    <Support />
-  </div>
+  <React.StrictMode>
+    <div id="root">
+      <Navbar />
+      <main>
+        <BrowserRouter>
+          <Content />
+        </BrowserRouter>
+      </main>
+      <Support />
+    </div>
+  </React.StrictMode>
 );

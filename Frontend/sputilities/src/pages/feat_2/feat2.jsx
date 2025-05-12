@@ -141,15 +141,15 @@ const Feat2 = () => {
             onChange={(e) => setPlaylistDescription(e.target.value)}
           ></textarea>
         </div>
-        <div className="form-group">
-          <label>
-            <input
-              type="checkbox"
-              checked={isPublic}
-              onChange={(e) => setIsPublic(e.target.checked)}
-            />
-            Public Playlist
-          </label>
+        <div  style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <label>
+                <input
+                    type="checkbox"
+                    checked={isPublic}
+                    onChange={(e) => setIsPublic(e.target.checked)}
+                />
+                Public Playlist
+            </label>
         </div>
         <button onClick={handleCreatePlaylist} className="create-btn">
           Create Playlist

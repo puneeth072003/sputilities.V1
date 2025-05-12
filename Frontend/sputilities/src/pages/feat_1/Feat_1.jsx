@@ -46,7 +46,7 @@ const Feat_1 = () => {
     <div className="success_body">
       <img src={Logowhite} alt="Sputililties_logo" className="feat1-logo" />
       <div className="timer-container">
-        <h2>
+        <h2 className="h2-playlist">
           {countdown === 0
             ? failure
               ? "Playlist Successfully created"

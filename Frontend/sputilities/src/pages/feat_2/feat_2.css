@@ -97,8 +97,9 @@
 }
 
 .form-group label {
-  display: block;
-  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Add spacing between the checkbox and the label text */
 }
 
 .form-group input,
@@ -107,6 +108,10 @@
   padding: 0.5rem;
   border-radius: 4px;
   border: none;
+}
+
+.form-group input[type="checkbox"] {
+  margin: 0; /* Remove default margin for better alignment */
 }
 
 .create-btn {
