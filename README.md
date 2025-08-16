@@ -11,7 +11,7 @@ With Sputilities, you can effortlessly **manage all your liked songs and easily 
     </video>
 </center>
 
-*Demo video available*
+*Demo video available in Assets folder*
 
 **Proud successor to Spotinus project**
 
