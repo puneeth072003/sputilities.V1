@@ -7,7 +7,7 @@
 <br>
 <div align="center">
   <div align="center">
-    <img src="/src/App/assets/sputilities.svg" alt="Sputilities Logo" width="200" align="center" />
+    <img src="https://raw.githubusercontent.com/puneeth072003/sputilities.V1/main/Frontend/sputilities/src/App/assets/sputilities.svg" alt="Sputilities Logo" width="200" align="center" />
   </div>
 
 <br>
@@ -16,14 +16,14 @@
   <p align="center">
     Modern Spotify Playlist & Music Library Management Platform
     <br />
-    <a href="https://github.com/puneeth072003/sputilities"><strong>Explore the repo »</strong></a>
+    <a href="https://github.com/puneeth072003/sputilities.V1"><strong>Explore the repo »</strong></a>
     <br />
     <br />
     <a href="#demo">View Demo</a>
     &middot;
-    <a href="https://github.com/puneeth072003/sputilities/issues/new?labels=bug">Report Bug</a>
+    <a href="https://github.com/puneeth072003/sputilities.V1/issues/new?labels=bug">Report Bug</a>
     &middot;
-    <a href="https://github.com/puneeth072003/sputilities/issues/new?labels=enhancement">Request Feature</a>
+    <a href="https://github.com/puneeth072003/sputilities.V1/issues/new?labels=enhancement">Request Feature</a>
   </p>
 </div>
 
@@ -687,11 +687,11 @@ This project was inspired by the need for better playlist management tools and t
 ---
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[last-commit-shield]: https://img.shields.io/github/last-commit/yourusername/sputilities?style=for-the-badge
-[last-commit-url]: https://github.com/yourusername/sputilities/commits/main
-[issues-shield]: https://img.shields.io/github/issues/yourusername/sputilities?style=for-the-badge
-[issues-url]: https://github.com/yourusername/sputilities/issues
-[license-shield]: https://img.shields.io/github/license/yourusername/sputilities?style=for-the-badge
-[license-url]: https://github.com/yourusername/sputilities/blob/main/LICENSE
-[top-language-shield]: https://img.shields.io/github/languages/top/yourusername/sputilities?style=for-the-badge
-[top-language-url]: https://github.com/yourusername/sputilities
+[last-commit-shield]: https://img.shields.io/github/last-commit/puneeth072003/sputilities.V1?style=for-the-badge
+[last-commit-url]: https://github.com/puneeth072003/sputilities.V1/commits/main
+[issues-shield]: https://img.shields.io/github/issues/puneeth072003/sputilities.V1?style=for-the-badge
+[issues-url]: https://github.com/puneeth072003/sputilities.V1/issues
+[license-shield]: https://img.shields.io/github/license/puneeth072003/sputilities.V1?style=for-the-badge
+[license-url]: https://github.com/puneeth072003/sputilities.V1/blob/main/LICENSE
+[top-language-shield]: https://img.shields.io/github/languages/top/puneeth072003/sputilities.V1?style=for-the-badge
+[top-language-url]: https://github.com/puneeth072003/sputilities.V1
