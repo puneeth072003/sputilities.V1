@@ -124,6 +124,11 @@ a {
   border: #191414;
   border-radius: 10px;
 }
+.login-btn.logged-in {
+  cursor: default;
+  background-color: #1db954;
+  color: white;
+}
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;

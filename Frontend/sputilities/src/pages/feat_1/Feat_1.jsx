@@ -9,12 +9,15 @@ const Feat_1 = () => {
 
   const fetchDataFromBackend = async () => {
     try {
-      const response = await fetch("http://localhost:3600/api/v1/feat_1"); // Replace with your actual backend endpoint
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3601/api/v1';
+      const response = await fetch(`${apiUrl}/feat_1`, {
+        credentials: "include"  // send cookies with the request
+      });
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      if (data.state == true) {
+      if (data.state === true) {
         console.log("Setting failure to true");
         setFailure(true);
       } else {
@@ -42,9 +45,9 @@ const Feat_1 = () => {
 
   return (
     <div className="success_body">
-      <img src={Logowhite} alt="Sputililties_logo" className="feat1-logo"></img>
+      <img src={Logowhite} alt="Sputililties_logo" className="feat1-logo" />
       <div className="timer-container">
-        <h2>
+        <h2 className="h2-playlist">
           {countdown === 0
             ? failure
               ? "Playlist Successfully created"
