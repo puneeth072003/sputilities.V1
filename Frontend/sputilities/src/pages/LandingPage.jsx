@@ -42,7 +42,7 @@ const LandingPage = () => {
       {/* Hero Section with Parallax */}
       <Parallax
         blur={0}
-        bgImage="src\App\assets\sputilities.svg"
+        bgImage="/src/App/assets/sputilities.svg"
         bgImageAlt="Spotify Background"
         strength={200}
         className="min-h-screen"
@@ -56,7 +56,7 @@ const LandingPage = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <img
-                src="src\App\assets\sputilities.svg"
+                src="/src/App/assets/sputilities.svg"
                 alt="Sputilities Logo"
                 className="w-48 h-48 mx-auto"
               />

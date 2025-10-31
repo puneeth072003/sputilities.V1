@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import LandingPage from "../pages/LandingPage"; // Keep landing page eager for SEO
 import Login from "../pages/Login"; // Keep login eager for UX
 import AuthCallback from "../pages/AuthCallback"; // Keep auth callback eager
+import NotFound from "../pages/NotFound"; // Keep 404 page eager
 
 // Lazy load main app pages
 import { createLazyRoute, preloadCriticalRoutes } from "../utils/lazyLoading.jsx";
@@ -82,8 +83,8 @@ const Content = () => {
               <Route path="settings" element={<Settings />} />
             </Route>
 
-            {/* Catch all route */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            {/* Catch all route - 404 */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
 
         {/* Global Toast Notifications */}
