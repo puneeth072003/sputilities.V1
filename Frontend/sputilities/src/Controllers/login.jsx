@@ -1,16 +1,16 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
+import { legacyAPI, usersAPI } from "../services/api";
 
 const fetchProfile = async () => {
   try {
     // Check if there's an active session first
-    const checkSession = await axios.get("http://localhost:3600/api/v1/check-login", { withCredentials: true });
+    const checkSession = await legacyAPI.checkLogin();
     if (checkSession.data !== true) {
       return "Login";
     }
 
-    const response = await axios.get("http://localhost:3600/api/v1/getUser", { withCredentials: true });
+    const response = await legacyAPI.getUser();
     const username = response.data;
     if (username && username !== "Guest") {
       return username;

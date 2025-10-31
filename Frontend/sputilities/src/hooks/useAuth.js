@@ -22,13 +22,20 @@ export const useAuth = () => {
   const { data: authData, isLoading: isCheckingAuth } = useQuery({
     queryKey: ['auth', 'check'],
     queryFn: async () => {
-      const response = await authAPI.check();
-      return response.data.data;
+      try {
+        const response = await authAPI.check();
+        // Handle legacy boolean response format
+        const isAuthenticated = response.data === true;
+        return { authenticated: isAuthenticated, user: null };
+      } catch (error) {
+        console.error('Auth check failed:', error);
+        return { authenticated: false, user: null };
+      }
     },
     retry: false,
     staleTime: 5 * 60 * 1000, // 5 minutes
     onSuccess: (data) => {
-      if (data.authenticated) {
+      if (data?.authenticated) {
         useAuthStore.getState().setUser(data.user);
         useAuthStore.getState().setAuthenticated(true);
       } else {
@@ -47,8 +54,22 @@ export const useAuth = () => {
   const loginMutation = useMutation({
     mutationFn: authAPI.login,
     onSuccess: (response) => {
-      const { redirectUrl } = response.data.data;
-      window.location.href = redirectUrl;
+      try {
+        // Handle both new API format and legacy format
+        let redirectUrl;
+        if (response.data?.data?.redirectUrl) {
+          redirectUrl = response.data.data.redirectUrl;
+        } else if (response.data?.redirectUrl) {
+          redirectUrl = response.data.redirectUrl;
+        } else {
+          throw new Error('No redirect URL found in response');
+        }
+        window.location.href = redirectUrl;
+      } catch (error) {
+        console.error('Login response error:', error);
+        toast.error('Failed to get login URL');
+        useAuthStore.getState().setError('Failed to get login URL');
+      }
     },
     onError: (error) => {
       const errorMessage = handleAPIError(error);

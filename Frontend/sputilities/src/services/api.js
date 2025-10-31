@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 
 // API Configuration
 const API_CONFIG = {
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3600/api/v1',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3601/api/v1',
   timeout: 30000,
   retryAttempts: 3,
   retryDelay: 1000,
@@ -132,11 +132,14 @@ export const authAPI = {
   login: () => api.get('/auth/login'),
   check: () => api.get('/auth/check'),
   logout: () => api.post('/auth/logout'),
+  getSession: () => api.get('/auth/session'),
+  getToken: () => api.get('/auth/token'),
 };
 
 // Playlists API
 export const playlistsAPI = {
   getPlaylists: (params = {}) => api.get('/playlists', { params }),
+  syncPlaylists: () => api.post('/playlists/sync'),
   createPlaylist: (data) => api.post('/playlists', data),
   deletePlaylist: (playlistId) => api.delete(`/playlists/${playlistId}`),
   bulkDelete: (playlistIds) => api.post('/playlists/bulk-delete', { playlistIds }),
@@ -146,6 +149,7 @@ export const playlistsAPI = {
 // Liked Songs API
 export const likedSongsAPI = {
   getLikedSongs: (params = {}) => api.get('/liked-songs', { params }),
+  syncLikedSongs: () => api.post('/liked-songs/sync'),
   likePlaylist: (playlistId) => api.post(`/liked-songs/like-playlist/${playlistId}`),
   reset: () => api.post('/liked-songs/reset'),
   backup: (data) => api.post('/liked-songs/backup', data),
@@ -157,6 +161,9 @@ export const operationsAPI = {
   getOperations: (params = {}) => api.get('/operations', { params }),
   getOperation: (operationId) => api.get(`/operations/${operationId}`),
   cancelOperation: (operationId) => api.post(`/operations/${operationId}/cancel`),
+  deleteOperation: (operationId) => api.delete(`/operations/${operationId}`),
+  getStats: () => api.get('/operations/stats'),
+  cleanup: (params = {}) => api.post('/operations/cleanup', {}, { params }),
 };
 
 // Playlist Manager API
@@ -164,7 +171,10 @@ export const playlistManagerAPI = {
   getDashboard: () => api.get('/playlist-manager/dashboard'),
   getPlaylists: (params = {}) => api.get('/playlist-manager/playlists', { params }),
   getDeletionPreview: (playlistIds) => api.post('/playlist-manager/deletion-preview', { playlistIds }),
+  selectiveDelete: (data) => api.post('/playlist-manager/selective-delete', data),
   getDuplicates: () => api.get('/playlist-manager/duplicates'),
+  getCleanupSuggestions: () => api.get('/playlist-manager/cleanup-suggestions'),
+  batchOperations: (data) => api.post('/playlist-manager/batch-operations', data),
 };
 
 // Tracks API
@@ -180,6 +190,15 @@ export const tracksAPI = {
   getPlaylistAnalytics: (playlistId) => api.get(`/playlists/${playlistId}/analytics`),
 };
 
+// Users API
+export const usersAPI = {
+  getProfile: () => api.get('/users/profile'),
+  updatePreferences: (preferences) => api.put('/users/preferences', { preferences }),
+  getStatistics: () => api.get('/users/statistics'),
+  getInfo: () => api.get('/users/info'), // Legacy endpoint
+  deleteAccount: (confirmed = false) => api.delete('/users/account', { data: { confirmed } }),
+};
+
 // Smart Management API
 export const smartAPI = {
   findDuplicates: (playlistId) => api.get(`/smart/playlists/${playlistId}/duplicates`),
@@ -189,6 +208,21 @@ export const smartAPI = {
   previewMerge: (data) => api.post('/smart/playlists/merge/preview', data),
   sortPlaylist: (playlistId, data) => api.put(`/smart/playlists/${playlistId}/sort`, data),
   getGenres: () => api.get('/smart/genres'),
+};
+
+// Legacy API (for backward compatibility)
+export const legacyAPI = {
+  checkLogin: () => api.get('/legacy/check-login'),
+  getUser: () => api.get('/legacy/getUser'),
+  getSession: () => api.get('/legacy/session'),
+  getSessionInfo: () => api.get('/legacy/session_info'),
+  fetchLiked: () => api.get('/legacy/liked'),
+  createPlaylist: (data) => api.post('/legacy/playlist', data),
+  addSongs: () => api.get('/legacy/addsong'),
+  feat1: () => api.get('/legacy/feat_1'),
+  feat2Liked: () => api.get('/legacy/feat_2/liked'),
+  feat2: (data) => api.post('/legacy/feat_2', data),
+  feat2Create: (data) => api.post('/legacy/feat_2/create', data),
 };
 
 // Error handling utility

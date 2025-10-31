@@ -9,7 +9,8 @@ const Feat_1 = () => {
 
   const fetchDataFromBackend = async () => {
     try {
-      const response = await fetch("http://localhost:3600/api/v1/feat_1", { 
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3601/api/v1';
+      const response = await fetch(`${apiUrl}/feat_1`, {
         credentials: "include"  // send cookies with the request
       });
       if (!response.ok) {

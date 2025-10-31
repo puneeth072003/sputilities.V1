@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import { fetchProfile } from "../Controllers/login";
-import axios from "axios";
+import { authAPI } from "../services/api";
 
 const Navlinks = () => {
-  const url = "http://localhost:3600/api/v1/login";
   const [auth, setAuth] = useState(false);
   const [username, setUsername] = useState("Login");
   const [polling, setPolling] = useState(true);
 
   const handleLogin = async () => {
     try {
-      const response = await axios.get(url, { withCredentials: true });
+      const response = await authAPI.login();
       if (response.data.redirectUrl) {
         sessionStorage.setItem("returnTo", window.location.href);
         window.location.href = response.data.redirectUrl;

@@ -1,8 +1,8 @@
-import axios from "axios";
+import { legacyAPI } from "../../services/api";
 
 async function handleFeat1() {
   try {
-    const response = await axios.get("http://localhost:3600/api/v1/feat_1");
+    const response = await legacyAPI.feat1();
     return true;
   } catch (error) {
     throw false;

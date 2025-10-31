@@ -42,7 +42,7 @@ const LandingPage = () => {
       {/* Hero Section with Parallax */}
       <Parallax
         blur={0}
-        bgImage="/api/placeholder/1920/1080"
+        bgImage="src\App\assets\sputilities.svg"
         bgImageAlt="Spotify Background"
         strength={200}
         className="min-h-screen"
@@ -55,8 +55,13 @@ const LandingPage = () => {
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
+              <img
+                src="src\App\assets\sputilities.svg"
+                alt="Sputilities Logo"
+                className="w-48 h-48 mx-auto"
+              />
               <h1 className="text-6xl md:text-8xl font-bold mb-6">
-                <span className="text-gradient">Sputilities</span>
+                <span className="text-gradient">Sputilities.</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 The ultimate toolkit for Spotify power users. Manage playlists, 

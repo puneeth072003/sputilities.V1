@@ -42,8 +42,8 @@ A modern, responsive React application for managing Spotify playlists and music 
 3. **Environment Setup**
    Create a `.env` file in the root directory:
    ```env
-   REACT_APP_API_URL=http://localhost:3600/api/v1
-   REACT_APP_ENABLE_PERFORMANCE_MONITORING=true
+   VITE_API_URL=http://localhost:3601/api/v1
+   VITE_ENABLE_PERFORMANCE_MONITORING=true
    ```
 
 4. **Start the development server**
@@ -161,8 +161,8 @@ npm run build
 ### Environment Variables
 Set these in your production environment:
 ```env
-REACT_APP_API_URL=https://your-api-domain.com/api/v1
-REACT_APP_ENABLE_PERFORMANCE_MONITORING=false
+VITE_API_URL=https://your-api-domain.com/api/v1
+VITE_ENABLE_PERFORMANCE_MONITORING=false
 ```
 
 ### Performance Optimizations
