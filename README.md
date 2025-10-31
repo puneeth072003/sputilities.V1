@@ -613,10 +613,10 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 **Project Maintainer**: Your Name
 
-- GitHub: [@yourusername](https://github.com/puneeth072003)
+- GitHub: [@puneeth072003](https://github.com/puneeth072003)
 - Email: pyd773@gmail.com
 
-**Project Link**: [https://github.com/yourusername/sputilities](https://github.com/puneeth072003/sputilities.V1)
+**Project Link**: [https://github.com/puneeth072003/sputilities.V1](https://github.com/puneeth072003/sputilities.V1)
 
 ---
 
