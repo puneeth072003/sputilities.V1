@@ -8,7 +8,7 @@ const Navlinks = () => {
   const [username, setUsername] = useState("Login");
   const [polling, setPolling] = useState(true);
 
-  const handleLogin = async () => {
+  const handleLogin = () => {
     try {
       const response = await authAPI.login();
       if (response.data.redirectUrl) {
@@ -56,6 +56,17 @@ const Navlinks = () => {
           >
             {username}
           </button>
+          {showToast && (
+            <div className="toast show">
+              <div className="toast-header">
+                <strong className="me-auto">Notification</strong>
+                <button type="button" className="btn-close" onClick={() => setShowToast(false)} aria-label="Close"></button>
+              </div>
+              <div className="toast-body">
+              Oops! Our backend is currently on an unscheduled vacation. Logging in isn’t possible at the moment; thanks for your understanding!
+              </div>
+            </div>
+          )}
         </li>
       </ul>
     </nav>

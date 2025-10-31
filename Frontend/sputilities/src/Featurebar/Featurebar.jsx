@@ -50,6 +50,8 @@ const Featurebar = () => {
           <img className="feat-img" src={toLiked} alt="Like Playlist" />
           <h3 className="feat-name">Like all the songs of a playlist</h3>
         </div>
+        </Link>
+        <Link to="/feat_1">
         <div className={`feat-box ${isVisible ? "visible" : ""}`}>
           <img className="feat-img" src={manageliked} alt="Manage Liked" />
           <h3 className="feat-name">
@@ -57,10 +59,13 @@ const Featurebar = () => {
             songs
           </h3>
         </div>
+        </Link>
+        <Link to="/feat_1">
         <div className={`feat-box ${isVisible ? "visible" : ""}`}>
           <img className="feat-img" src={resetLiked} alt="Reset Liked" />
           <h3 className="feat-name">Reset liked library</h3>
         </div>
+        </Link>
       </div>
       <h2 className={`andMore ${isVisible ? "visible" : ""}`}>
         And many more coming soon
