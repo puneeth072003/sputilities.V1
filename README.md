@@ -1,7 +1,6 @@
 <!-- Badges -->
 [![Last Commit][last-commit-shield]][last-commit-url]
 [![Issues][issues-shield]][issues-url]
-[![License][license-shield]][license-url]
 [![Top Language][top-language-shield]][top-language-url]
 
 <br>
@@ -692,6 +691,5 @@ This project was inspired by the need for better playlist management tools and t
 [issues-shield]: https://img.shields.io/github/issues/puneeth072003/sputilities.V1?style=for-the-badge
 [issues-url]: https://github.com/puneeth072003/sputilities.V1/issues
 [license-shield]: https://img.shields.io/github/license/puneeth072003/sputilities.V1?style=for-the-badge
-[license-url]: https://github.com/puneeth072003/sputilities.V1/blob/main/LICENSE
 [top-language-shield]: https://img.shields.io/github/languages/top/puneeth072003/sputilities.V1?style=for-the-badge
 [top-language-url]: https://github.com/puneeth072003/sputilities.V1
