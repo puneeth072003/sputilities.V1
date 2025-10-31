@@ -613,13 +613,10 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 **Project Maintainer**: Your Name
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- GitHub: [@yourusername](https://github.com/puneeth072003)
+- Email: pyd773@gmail.com
 
-**Project Link**: [https://github.com/yourusername/sputilities](https://github.com/yourusername/sputilities)
-
-**Live Demo**: [https://sputilities.vercel.app](https://sputilities.vercel.app)
+**Project Link**: [https://github.com/yourusername/sputilities](https://github.com/puneeth072003/sputilities.V1)
 
 ---
 
