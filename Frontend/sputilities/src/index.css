@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "spotify-circular";
   src: url("fonts/CircularSpotifyText-Black.otf") format("opentype"),
@@ -11,36 +15,186 @@
   font-weight: normal;
   font-style: normal;
 }
-html {
-  background-color: #191414;
-}
-#root {
-  font-family: "spotify-circular";
-}
 
-/* On Scroll effect */
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  box-sizing: border-box;
-  color: white;
-  background-color: black; /* Optional: Add background color for better visibility */
-}
-
-.marquee-p{
-  display: inline-block;
-  padding-left: 100%;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  animation: marquee 15s linear infinite;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translate(0, 0);
+@layer base {
+  html, body {
+    @apply h-full m-0 bg-spotify-black font-spotify;
   }
-  100% {
-    transform: translate(-100%, 0);
+
+  #root {
+    @apply flex flex-col flex-grow h-full;
   }
+
+  main {
+    @apply flex-grow;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-spotify-green hover:bg-green-600 text-white font-bold py-2 px-4 rounded transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-spotify-green text-spotify-green hover:bg-spotify-green hover:text-white font-bold py-2 px-4 rounded transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-spotify-dark rounded-lg p-6 shadow-lg border border-gray-800;
+  }
+
+  .input-field {
+    @apply bg-spotify-dark border border-gray-600 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-spotify-green transition-colors duration-200;
+  }
+
+  .parallax-bg {
+    @apply fixed top-0 left-0 w-full h-full -z-10 bg-gradient-to-b from-spotify-green/20 to-spotify-black;
+    animation: parallax 20s linear infinite;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-spotify-green to-green-400 bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+
+  /* Accessibility utilities */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-spotify-green focus:ring-offset-2 focus:ring-offset-spotify-black;
+  }
+
+  /* Responsive text utilities */
+  .text-responsive-xs {
+    @apply text-xs sm:text-sm;
+  }
+
+  .text-responsive-sm {
+    @apply text-sm sm:text-base;
+  }
+
+  .text-responsive-base {
+    @apply text-base sm:text-lg;
+  }
+
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl md:text-3xl;
+  }
+
+  .text-responsive-2xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  /* Container utilities */
+  .container-responsive {
+    @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Grid utilities */
+  .grid-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+
+  .grid-responsive-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6;
+  }
+
+  .grid-responsive-3 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  /* Scroll utilities */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Print utilities */
+  @media print {
+    .print-hidden {
+      display: none !important;
+    }
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-2 border-white;
+  }
+
+  .btn-primary {
+    @apply border-2 border-white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .parallax-bg {
+    animation: none !important;
+  }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Focus management for keyboard navigation */
+.focus-trap {
+  @apply focus:outline-none;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  @apply absolute -top-10 left-6 bg-spotify-green text-white px-4 py-2 rounded-md z-50 transition-all duration-200;
+}
+
+.skip-link:focus {
+  @apply top-6;
 }
