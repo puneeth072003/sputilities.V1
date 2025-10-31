@@ -7,7 +7,7 @@
 <br>
 <div align="center">
   <div align="center">
-    <img src="https://raw.githubusercontent.com/puneeth072003/sputilities.V1/main/Frontend/sputilities/src/App/assets/sputilities.svg" alt="Sputilities Logo" width="200" align="center" />
+    <img src="Assets\logo-white.png" alt="Sputilities Logo" width="200" align="center" />
   </div>
 
 <br>
