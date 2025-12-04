@@ -7,10 +7,8 @@ const Navlinks = () => {
   const [auth, setAuth] = useState(false);
   const [username, setUsername] = useState("Login");
   const [polling, setPolling] = useState(true);
-  const [showToast, setShowToast] = useState(false);
 
-
-  const handleLogin = async () => {
+  const handleLogin = () => {
     try {
       const response = await authAPI.login();
       if (response.data.redirectUrl) {
@@ -19,7 +17,6 @@ const Navlinks = () => {
       }
     } catch (error) {
       console.error("Error in login:", error);
-      setShowToast(true);
     }
   };
 
