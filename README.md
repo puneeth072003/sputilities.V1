@@ -1,13 +1,13 @@
 <!-- Badges -->
 [![Last Commit][last-commit-shield]][last-commit-url]
 [![Issues][issues-shield]][issues-url]
+[![License][license-shield]][license-url]
 [![Top Language][top-language-shield]][top-language-url]
-[![Netlify Status](https://api.netlify.com/api/v1/badges/7c864263-e637-4925-94f9-a04be6dfc062/deploy-status)](https://app.netlify.com/projects/sputilities/deploys)
 
 <br>
 <div align="center">
   <div align="center">
-    <img src="Assets\logo-white.png" alt="Sputilities Logo" width="200" align="center" />
+    <img src="https://raw.githubusercontent.com/puneeth072003/sputilities.V1/main/Frontend/sputilities/src/App/assets/sputilities.svg" alt="Sputilities Logo" width="200" align="center" />
   </div>
 
 <br>
@@ -614,7 +614,31 @@ Have an idea? [Open a feature request](https://github.com/yourusername/sputiliti
 
 ## License
 
-This project is licensed under the **MIT License** - see the LICENSE file for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2024 Sputilities
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ---
 
@@ -622,10 +646,13 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 **Project Maintainer**: Your Name
 
-- GitHub: [@puneeth072003](https://github.com/puneeth072003)
-- Email: pyd773@gmail.com
+- GitHub: [@yourusername](https://github.com/yourusername)
+- Email: your.email@example.com
+- Twitter: [@yourhandle](https://twitter.com/yourhandle)
 
-**Project Link**: [https://github.com/puneeth072003/sputilities.V1](https://github.com/puneeth072003/sputilities.V1)
+**Project Link**: [https://github.com/yourusername/sputilities](https://github.com/yourusername/sputilities)
+
+**Live Demo**: [https://sputilities.vercel.app](https://sputilities.vercel.app)
 
 ---
 
@@ -673,5 +700,6 @@ This project was inspired by the need for better playlist management tools and t
 [issues-shield]: https://img.shields.io/github/issues/puneeth072003/sputilities.V1?style=for-the-badge
 [issues-url]: https://github.com/puneeth072003/sputilities.V1/issues
 [license-shield]: https://img.shields.io/github/license/puneeth072003/sputilities.V1?style=for-the-badge
+[license-url]: https://github.com/puneeth072003/sputilities.V1/blob/main/LICENSE
 [top-language-shield]: https://img.shields.io/github/languages/top/puneeth072003/sputilities.V1?style=for-the-badge
 [top-language-url]: https://github.com/puneeth072003/sputilities.V1
