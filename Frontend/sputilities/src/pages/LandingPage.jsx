@@ -12,6 +12,8 @@ import {
   ArrowRight,
   Play,
 } from 'lucide-react';
+import logo from '../App/assets/sputilities.svg';
+
 
 const features = [
   {
@@ -42,7 +44,7 @@ const LandingPage = () => {
       {/* Hero Section with Parallax */}
       <Parallax
         blur={0}
-        bgImage="/src/App/assets/sputilities.svg"
+        bgImage={logo}
         bgImageAlt="Spotify Background"
         strength={200}
         className="min-h-screen"
@@ -56,7 +58,7 @@ const LandingPage = () => {
               className="text-center max-w-4xl mx-auto"
             >
               <img
-                src="/src/App/assets/sputilities.svg"
+                src={logo}
                 alt="Sputilities Logo"
                 className="w-48 h-48 mx-auto"
               />
@@ -64,10 +66,10 @@ const LandingPage = () => {
                 <span className="text-gradient">Sputilities.</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                The ultimate toolkit for Spotify power users. Manage playlists, 
+                The ultimate toolkit for Spotify power users. Manage playlists,
                 organize your music library, and discover new ways to enjoy your favorite songs.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/login"
@@ -77,7 +79,7 @@ const LandingPage = () => {
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                
+
                 <a
                   href="#features"
                   className="btn-secondary text-lg px-8 py-4 hover-lift"
