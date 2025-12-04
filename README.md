@@ -2,6 +2,7 @@
 [![Last Commit][last-commit-shield]][last-commit-url]
 [![Issues][issues-shield]][issues-url]
 [![Top Language][top-language-shield]][top-language-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7c864263-e637-4925-94f9-a04be6dfc062/deploy-status)](https://app.netlify.com/projects/sputilities/deploys)
 
 <br>
 <div align="center">
