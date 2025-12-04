@@ -531,6 +531,14 @@ See the [open issues](https://github.com/yourusername/sputilities/issues) for a 
 
 We welcome contributions from the community! Here's how you can help:
 
+> Before you start, please review the following project documents:
+>
+> - Contributing Guide: [CONTRIBUTING.md](CONTRIBUTING.md)
+> - Code of Conduct: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+> - Security Policy: [SECURITY.md](SECURITY.md)
+
+
+
 ### How to Contribute
 
 1. **Fork the Repository**
